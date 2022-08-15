@@ -112,6 +112,28 @@ public class Calculator implements ActionListener{
 			}
 		}
 		
+		if(e.getSource()==decButton) {
+			textfield.setText(textfield.getText().concat("."));
+		}
+		
+		if(e.getSource()==negButton) {
+			double temp = Double.parseDouble(textfield.getText());
+			temp *= -1;
+			textfield.setText(String.valueOf(temp));
+		}
+		
+		if(e.getSource()==delButton) {
+			String string = textfield.getText();
+			textfield.setText(" ");
+			for(int i=0; i<string.length()-1; i++) {
+				textfield.setText(textfield.getText() + string.charAt(i));
+			}
+		}
+		
+		if(e.getSource()==clrButton) {
+			textfield.setText(" ");
+		}
+		
 	}
 
 }
