@@ -134,6 +134,29 @@ public class Calculator implements ActionListener{
 			textfield.setText(" ");
 		}
 		
+		if(e.getSource()==addButton) {
+			num1 = Double.parseDouble(textfield.getText());
+			operator = '+';
+			textfield.setText(" ");
+		}
+		
+		if(e.getSource()==subButton) {
+			num1 = Double.parseDouble(textfield.getText());
+			operator = '-';
+			textfield.setText(" ");
+		}	
+		
+		if(e.getSource()==mulButton) {
+			num1 = Double.parseDouble(textfield.getText());
+			operator = '*';
+			textfield.setText(" ");
+		}
+		
+		if(e.getSource()==divButton) {
+			num1 = Double.parseDouble(textfield.getText());
+			operator = '/';
+			textfield.setText(" ");
+		}
 	}
 
 }
